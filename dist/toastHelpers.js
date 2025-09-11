@@ -1,10 +1,13 @@
 import { toast } from "react-toastify";
+import { jsx as _jsx } from "react/jsx-runtime";
 var showToast = function showToast(type, message) {
-  var content = /*#__PURE__*/React.createElement("div", null, message.split("\n").map(function (line, index) {
-    return /*#__PURE__*/React.createElement("p", {
-      key: index
-    }, line);
-  }));
+  var content = /*#__PURE__*/_jsx("div", {
+    children: message.split("\n").map(function (line, index) {
+      return /*#__PURE__*/_jsx("p", {
+        children: line
+      }, index);
+    })
+  });
   var options = {
     position: "top-right",
     autoClose: 3000,
