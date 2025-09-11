@@ -1,21 +1,37 @@
 {
-  "name": "toast_notification",
+  "name": "toastify-ui",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Un wrapper simple autour de react-toastify pour gérer facilement les notifications toast dans React.",
+  "main": "src/index.jsx",
+  "module": "src/index.jsx",
+  "type": "module",
+  "files": [
+    "src"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/m-salaun-esimed/toast_notification.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "SALAUN Matthieu",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/m-salaun-esimed/toast_notification/issues"
   },
   "homepage": "https://github.com/m-salaun-esimed/toast_notification#readme",
-  "description": "",
+  "keywords": [
+    "react",
+    "toast",
+    "notifications",
+    "react-toastify",
+    "ui"
+  ],
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
   "dependencies": {
     "react-toastify": "^11.0.5"
   }
