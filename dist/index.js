@@ -1,2 +1,3 @@
-export { default as ToastContainerUi } from "./ToastContainerUi";
-export * from './toastHelpers';
+import ToastContainerUi from "./ToastContainerUi";
+import * as toastHelpers from './toastHelpers';
+export { ToastContainerUi, toastHelpers };
