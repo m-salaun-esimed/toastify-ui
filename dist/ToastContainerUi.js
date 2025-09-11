@@ -1,13 +1,7 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-var _reactToastify = require("react-toastify");
-require("react-toastify/dist/ReactToastify.css");
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function ToastContainerUi() {
-  return /*#__PURE__*/React.createElement(_reactToastify.ToastContainer, {
+  return /*#__PURE__*/React.createElement(ToastContainer, {
     position: "top-right",
     autoClose: 3000,
     hideProgressBar: false,
@@ -20,4 +14,4 @@ function ToastContainerUi() {
     theme: "dark"
   });
 }
-var _default = exports["default"] = ToastContainerUi;
+export default ToastContainerUi;

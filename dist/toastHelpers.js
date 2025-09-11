@@ -1,10 +1,4 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.showToastWarning = exports.showToastSuccess = exports.showToastError = void 0;
-var _reactToastify = require("react-toastify");
+import { toast } from "react-toastify";
 var showToast = function showToast(type, message) {
   var content = /*#__PURE__*/React.createElement("div", null, message.split("\n").map(function (line, index) {
     return /*#__PURE__*/React.createElement("p", {
@@ -21,14 +15,14 @@ var showToast = function showToast(type, message) {
     progress: undefined,
     theme: "dark"
   };
-  _reactToastify.toast[type](content, options);
+  toast[type](content, options);
 };
-var showToastSuccess = exports.showToastSuccess = function showToastSuccess(msg) {
+export var showToastSuccess = function showToastSuccess(msg) {
   return showToast("success", msg);
 };
-var showToastWarning = exports.showToastWarning = function showToastWarning(msg) {
+export var showToastWarning = function showToastWarning(msg) {
   return showToast("warning", msg);
 };
-var showToastError = exports.showToastError = function showToastError(msg) {
+export var showToastError = function showToastError(msg) {
   return showToast("error", msg);
 };
