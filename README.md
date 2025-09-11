@@ -1,6 +1,6 @@
 # Toastify-UI
 
-Un petit wrapper autour de [react-toastify](https://fkhadra.github.io/react-toastify/introduction) pour simplifier l'utilisation des notifications toast dans vos projets **React**.  
+Une petite lib  autour de [react-toastify](https://fkhadra.github.io/react-toastify/introduction) pour simplifier l'utilisation des notifications toast dans vos projets **React**.  
 Il fournit un `ToastContainerUi` préconfiguré et des helpers (`showToastSuccess`, `showToastWarning`, `showToastError`) pour afficher vos notifications en une seule ligne.
 
 ---
