@@ -1,6 +1,6 @@
 {
   "name": "toastify-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Un wrapper simple autour de react-toastify pour gérer facilement les notifications toast dans React.",
   "main": "dist/index.js",
   "module": "dist/index.js",
