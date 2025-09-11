@@ -28,26 +28,27 @@ yarn add toastify-ui react-toastify
 Ajoutez le container une seule fois dans votre app (par exemple dans App.jsx ou _app.jsx pour Next.js) :
 
 ```javascript
-import React from "react";
-import { ToastContainerUi, showToastSuccess, showToastError } from "toastify-ui";
+import { ToastContainerUi, toastHelpers } from "toastify-ui";
+import { showToastError } from 'toastify-ui/dist/toastHelpers';
 
 function App() {
+
+  const test = () => {
+    return () => {
+      showToastError("This is a success message!");
+    }
+  }
+
   return (
-    <div>
-      <ToastContainerUi />
-
-      <button onClick={() => showToastSuccess("✅ Succès !")}>
-        Show Success
-      </button>
-
-      <button onClick={() => showToastError("❌ Erreur\nVeuillez réessayer")}>
-        Show Error
-      </button>
-    </div>
-  );
+    <>
+        <ToastContainerUi/>
+        <button onClick={test()}>test</button>
+    </>
+  )
 }
 
-export default App;
+export default App
+
 ```
 
 # API rapide
