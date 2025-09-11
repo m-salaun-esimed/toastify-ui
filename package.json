@@ -2,13 +2,15 @@
   "name": "toastify-ui",
   "version": "1.0.0",
   "description": "Un wrapper simple autour de react-toastify pour gérer facilement les notifications toast dans React.",
-  "main": "src/index.jsx",
-  "module": "src/index.jsx",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "type": "module",
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
+    "build": "babel src --out-dir dist --copy-files --extensions \".js,.jsx\"",
+    "prepare": "npm run build",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "repository": {
@@ -34,5 +36,11 @@
   },
   "dependencies": {
     "react-toastify": "^11.0.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "@babel/preset-react": "^7.23.0"
   }
 }
