@@ -1,3 +1,58 @@
+Toastify-UI
+A lightweight library built around react-toastify to simplify the use of toast notifications in your React projects.It provides a pre-configured ToastContainerUi component and helper functions (showToastSuccess, showToastWarning, showToastError) to display notifications with a single line of code.
+
+Features
+
+Easy to use (minimalist API)
+Pre-configured dark theme (easily customizable)
+Supports multiline messages (\n)
+Easily reusable in your projects or publishable to npm
+Centralized configuration (no need to repeat position, autoClose, etc.)
+
+
+Installation
+Install the library and its dependencies if needed:
+npm install toastify-ui react-toastify
+# or
+yarn add toastify-ui react-toastify
+
+Usage Example
+Add the container once in your app (e.g., in App.jsx or _app.jsx for Next.js):
+import { ToastContainerUi, toastHelpers } from "toastify-ui";
+import { showToastError } from 'toastify-ui/dist/toastHelpers';
+
+function App() {
+  const test = () => {
+    return () => {
+      showToastError("This is an error message!");
+    };
+  };
+
+  return (
+    <>
+      <ToastContainerUi />
+      <button onClick={test()}>Test</button>
+    </>
+  );
+}
+
+export default App;
+
+Quick API Reference
+Component
+
+ToastContainerUi: A component to be placed once in your app, containing the global configuration for toasts.
+
+Helpers
+
+showToastSuccess(message: string): Displays a success toast.
+showToastWarning(message: string): Displays a warning toast.
+showToastError(message: string): Displays an error toast.
+
+
+FRENCH VERSION :
+
+
 # Toastify-UI
 
 Une petite lib  autour de [react-toastify](https://fkhadra.github.io/react-toastify/introduction) pour simplifier l'utilisation des notifications toast dans vos projets **React**.  
